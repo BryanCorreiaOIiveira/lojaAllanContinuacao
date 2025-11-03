@@ -130,8 +130,6 @@
                         }catch(Except $erro){
                             echo "Algo deu errado!!!<br><br>".$erro;
                         }//fim do Try...Catch    
-                   
-
                     ?>
                 </button>
                 <button type="submit" class="btn btn-primary">Voltar</button>
