@@ -19,7 +19,7 @@
                 myqli_close($conn);
 
                 if($resutl){
-                    echo "Atualizado com sucesso!";
+                    return "Atualizado com sucesso!";
                 }//fim do if
             }catch(Exception $erro){
                 echo "Algo deu errando! $erro";

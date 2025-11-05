@@ -12,9 +12,7 @@
 
                 myqli_close($conn);
                 if($result){
-                    echo "Excluído com sucesso!";
-                }else{
-                    echo "Não excluído!";
+                    return "Excluído com sucesso!";
                 }
             }catch(Exception  $erro){
                 echo "<br><br>Algo deu errado!<br><br> $erro";

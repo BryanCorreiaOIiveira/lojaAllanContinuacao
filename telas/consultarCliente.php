@@ -28,5 +28,8 @@
             <?php $consultar->consultarCliente($conexao, $_POST['cpf']); ?>
         </button>
     </form>
+    <button class="btn btn-primary">
+        <a href="index.php" style="color:#fff;text-decoration:nome">Voltar</a>
+    </button>
 </body>
 </html>

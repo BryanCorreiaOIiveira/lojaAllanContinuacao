@@ -4,7 +4,7 @@
     require_once("../DAO/excluir.php");
     use Projeto\DAO\Conexao;
     use Projeto\DAO\Excluir;
- 
+    $resultado = "";
     $conexao = new Conexao();
     $excluir = new Excluir();
 ?>
@@ -25,11 +25,21 @@
             <input type="text" class="form-control" id="tCPF" name="tCPF">
         </div>
         <br><br>
-        <button type="submit">Excluir
+        <button type="submit" class="btn btn-primary">Excluir
             <?php
-                $excluir->excluirCliente($conexao, $_POST['tCPF']);
+                if(isset($_POST['tCPF']) != " "){
+                    $resultado = $excluir->excluirCliente($conexao, $_POST['tCPF']);
+                }
             ?>
         </button>
     </form>
+    <div class="mb-3">
+            <?php
+                echo $resultado;
+            ?>
+    </div>
+    <button class="btn btn-primary">
+        <a href="index.php" style="color:#fff;text-decoration:nome">Voltar</a>
+    </button>
 </body>
 </html>

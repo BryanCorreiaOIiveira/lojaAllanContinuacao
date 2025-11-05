@@ -7,6 +7,7 @@
 
     $conexao = new Conexao();
     $atualizar = new Atualizar();
+    $resultado = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +44,18 @@
         </div>
         <button type="submit" class="btn btn-primary">Atualizar
             <?php
-                $atualizar->atualizarCliente($conexao, $_POST['campos'],$_POST['novoDado'],$_POST['tCPF']);
+            if(isset($_POST['tCPF']) != ""){
+                $resultado = $atualizar->atualizarCliente($conexao, $_POST['campos'],$_POST['novoDado'],$_POST['tCPF']);
+             }
             ?>
         </button>
-    <<form>
+    <form>
+    <div class="mb-3">
+        <?php
+            echo $resultado
+        ?>
+        <button class="btn btn-primary">
+        <a href="index.php" style="color:#fff;text-decoration:nome">Voltar</a>
+    </button>
 </body>
 </html>
